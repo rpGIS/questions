@@ -1,0 +1,44 @@
+h1{
+  height:50px;}
+
+body {
+   background-image: url("yes.png");
+   background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#all {
+  display: flex;
+  background: #f0f0f5;
+  border:2px solid black;
+}
+#mapid {
+  flex: 0 0 60%;
+}
+#inputs {
+  flex: 1;
+}
+ #topcorner{
+   position:absolute;
+   top:0;
+   right:0;
+  }
+  #git {
+    color: #f0f0f5;
+    font-size: 2.5em;
+}
+#guide {
+  color: #f0f0f5;
+  font-size: 2.5em;
+}
+#git2 {
+  width: 60px;
+  height: 60px;
+  min-width: initial;
+}
+#guide2 {
+  width: 60px;
+  height: 60px;
+  min-width: initial;
+}
+</style>
