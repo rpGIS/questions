@@ -1,3 +1,5 @@
+//this loads two basemaps to be selected by the user: Code from https://leafletjs.com/examples/layers-control/
+
 var basic= L.tileLayer('https://api.mapbox.com/styles/v1/rpgis/cjdg3ldlug2552skafmvwpmoh/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoicnBnaXMiLCJhIjoiY2pkZzNqNnFpMGV2dDMzcmw5dmdxZWJvdCJ9.ma-X-QU8z-LjUdLr1mMqQw', {maxZoom: 18,attribution: 'Map data &copy; <ahref="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
     '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,'
   +
@@ -22,13 +24,13 @@ var base ={
 };
 
 L.control.layers(base).addTo(mymap);
-
+//creates the draggable marker
   var marker = L.marker([51.5245, -0.1339], {
     draggable:true
 });
-
+//adds the marker to the map
 marker.addTo(mymap);
-
+//pulls the coordinates from the marker and places them in the latitude and longitude boxes
 marker.on('dragend', function (e) {
   document.getElementById('latitude').value = marker.getLatLng().lat;
   document.getElementById('longitude').value = marker.getLatLng().lng;

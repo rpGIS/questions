@@ -59,11 +59,11 @@
   <div id="all">
 		<!-- the mapid div will hold the map -->
 		<div id="mapid" style="width: 60%; height: 480px; margin-right:5%"></div>
-		<!-- the following script will load the map and set the default view and zoom, as well as loading the basemap tiles -->
+		<!-- sets the width and height and margins around the div -->
 <div id="inputs" style="width:50%;height:480px;">
 <p><b>Drag the <i class="fas fa-map-marker-alt"></i> marker to select location!<b/></p>
 <br />
-
+<!--Creates the input areas for all the key components of the form-->
 <label for="longitude"> <b>Longitude:</b></label><input type="text" size="30" id="longitude" /><br /> <br />
 <label for="latitude"> <b>Latitude:     <b/></label><input type="text" size="30" id="latitude"/><br/><br />
   <p><b>Enter the question and four potential answers below<b/></p><br />
@@ -79,11 +79,12 @@
 <option>Answer3</option>
 <option>Answer4</option>
 </select>
-
+<!--Creates the button that uploads answers to the server on click-->
 <button id="dataUpload" onclick="startDataUpload();"<i class="fas fa-upload"></i> Upload Question</button>
 </div>
 </div>
 <div id="dataUploadResult"><font color="white">The result of the upload goes here</font></div>
+<!--Creates a div in the top right corner to contain github and userguide linked buttons -->
 <div id="topcorner">
   <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="git2" href="#" onclick="window.open('https://github.com/rpGIS?tab=repositories', '_system');">
     <i class="fab fa-github" id="git"></i>
@@ -93,6 +94,7 @@
          </button>
         </div>
 </main>
+<!--Provides sources for js files with necessary functions -->
 <script src="./js/uploadData.js"> </script>
 <script src="./js/mapactivity.js"></script>
 <script src="./js/markers.js"></script>
